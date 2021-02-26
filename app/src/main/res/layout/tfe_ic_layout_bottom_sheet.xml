@@ -347,5 +347,5 @@
         android:id="@+id/button2"
         android:layout_width="397dp"
         android:layout_height="79dp"
-        android:text="Button" />
+        android:text="Lodge a Complaint" />
 </LinearLayout>
