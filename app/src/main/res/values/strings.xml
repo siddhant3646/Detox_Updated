@@ -4,12 +4,12 @@
     <string name="tfe_ic_gpu_quant_error" translation_description="Error regarding GPU support for Quant models[CHAR_LIMIT=60]">GPU does not yet supported quantized models.</string>
     <string name="tfe_ic_model" translatable="false">Model:</string>
     <string name="detox">DeTox</string>
-    <string name="first_slide_title">anuj</string>
-    <string name="second_slide_title">siddhant</string>
-    <string name="third_slide_title">anthima</string>
-    <string name="first_slide_desc">Anuj</string>
-    <string name="second_slide_desc">siddhant</string>
-    <string name="third_slide_desc">anthima</string>
+    <string name="first_slide_title">first_slide_title</string>
+    <string name="second_slide_title">first_slide_title</string>
+    <string name="third_slide_title">first_slide_title</string>
+    <string name="first_slide_desc">first_slide_title</string>
+    <string name="second_slide_desc">first_slide_title</string>
+    <string name="third_slide_desc">first_slide_title</string>
     <string name="password">password</string>
     <string-array name="tfe_ic_models" translatable="false">
         <item>Quantized_EfficientNet</item>

@@ -100,7 +100,8 @@
             android:layout_width="match_parent"
             android:layout_height="1px"
             android:layout_marginTop="8dp"
-            android:background="@android:color/darker_gray" />
+            android:background="@android:color/darker_gray"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -114,7 +115,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Frame"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/frame_info"
@@ -123,7 +125,8 @@
             android:layout_marginTop="10dp"
             android:gravity="right"
             android:text="640*480"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -137,7 +140,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Crop"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/crop_info"
@@ -146,7 +150,8 @@
             android:layout_marginTop="10dp"
             android:gravity="right"
             android:text="640*480"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -160,7 +165,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="View"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/view_info"
@@ -169,7 +175,8 @@
             android:layout_marginTop="10dp"
             android:gravity="right"
             android:text="640*480"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -183,7 +190,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Rotation"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/rotation_info"
@@ -192,13 +200,15 @@
             android:layout_marginTop="10dp"
             android:gravity="right"
             android:text="640*480"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/inference"
@@ -206,7 +216,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Inference Time"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
 
         <TextView
             android:id="@+id/inference_info"
@@ -222,20 +233,23 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginTop="10dp"
-        android:background="@android:color/darker_gray" />
+        android:background="@android:color/darker_gray"
+        android:visibility="invisible" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="invisible">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Threads"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -250,7 +264,8 @@
                 android:id="@+id/minus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_remove" />
+                android:src="@drawable/ic_baseline_remove"
+                android:visibility="invisible" />
 
             <TextView
                 android:id="@+id/threads"
@@ -260,12 +275,15 @@
                 android:layout_marginRight="10dp"
                 android:text="1"
                 android:textColor="@android:color/black"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
             <ImageView
                 android:id="@+id/plus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_baseline_add" />
+                android:src="@drawable/ic_baseline_add"
+                android:visibility="invisible" />
 
         </LinearLayout>
     </RelativeLayout>
@@ -274,7 +292,8 @@
         android:layout_width="match_parent"
         android:layout_height="1px"
         android:layout_marginTop="10dp"
-        android:background="@android:color/darker_gray" />
+        android:background="@android:color/darker_gray"
+        android:visibility="invisible" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -286,36 +305,47 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/tfe_ic_model"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
 
         <Spinner
             android:id="@+id/model_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
             android:entries="@array/tfe_ic_models"
-            android:prompt="@string/tfe_ic_model" />
+            android:prompt="@string/tfe_ic_model"
+            android:visibility="invisible" />
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/tfe_ic_device"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:visibility="invisible" />
 
         <Spinner
             android:id="@+id/device_spinner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
             android:entries="@array/tfe_ic_devices"
-            android:prompt="@string/tfe_ic_device" />
+            android:prompt="@string/tfe_ic_device"
+            android:visibility="invisible" />
     </RelativeLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="397dp"
+        android:layout_height="79dp"
+        android:text="Button" />
 </LinearLayout>
