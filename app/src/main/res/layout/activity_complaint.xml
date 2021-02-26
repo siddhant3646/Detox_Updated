@@ -6,4 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".Complaint">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Complaint Page"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:layout_height="58dp"
+                android:layout_weight="1"
+                android:text="Enter The Details to get cleaning services in our area" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
