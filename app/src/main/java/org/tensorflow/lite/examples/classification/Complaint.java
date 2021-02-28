@@ -16,6 +16,7 @@ import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -35,6 +36,7 @@ public class Complaint extends AppCompatActivity {
     EditText txtdata ;
     EditText txtdata2 ;
     EditText txtdata3 ;
+    TextView t1;
     ImageView imgview;
     Uri FilePathUri;
     StorageReference storageReference;
@@ -54,6 +56,14 @@ public class Complaint extends AppCompatActivity {
         txtdata2 = (EditText)findViewById(R.id.txtdata2);
         txtdata3 = (EditText)findViewById(R.id.txtdata3);
         imgview = (ImageView)findViewById(R.id.image_view);
+        t1=findViewById(R.id.backtohome);
+        t1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i1 = new Intent(Complaint.this,CameraActivity.class);
+                startActivity(i1);
+            }
+        });
         progressDialog = new ProgressDialog(Complaint.this);
 
 
@@ -120,6 +130,7 @@ public class Complaint extends AppCompatActivity {
                             String TempImageName2 = txtdata2.getText().toString().trim();
                             String TempImageName3 = txtdata3.getText().toString().trim();
                             progressDialog.dismiss();
+                            Toast.makeText(Complaint.this, "Complaint Registered Succesfully", Toast.LENGTH_LONG).show();
                             @SuppressWarnings("VisibleForTests")
                             uploadinfo imageUploadInfo = new uploadinfo(TempImageName,TempImageName2,TempImageName3, taskSnapshot.getUploadSessionUri().toString());
                             String ImageUploadId = databaseReference.push().getKey();
