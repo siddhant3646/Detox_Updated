@@ -120,10 +120,6 @@ public class Complaint extends AppCompatActivity {
                             String TempImageName2 = txtdata2.getText().toString().trim();
                             String TempImageName3 = txtdata3.getText().toString().trim();
                             progressDialog.dismiss();
-                            Toast.makeText(getApplicationContext(), "Image Uploaded Successfully ", Toast.LENGTH_LONG).show();
-                            Intent i=new Intent(Complaint.this, CameraActivity.class);
-                            startActivity(i);
-                            finish();
                             @SuppressWarnings("VisibleForTests")
                             uploadinfo imageUploadInfo = new uploadinfo(TempImageName,TempImageName2,TempImageName3, taskSnapshot.getUploadSessionUri().toString());
                             String ImageUploadId = databaseReference.push().getKey();
@@ -145,6 +141,7 @@ public class Complaint extends AppCompatActivity {
         public String imageURL;
         public uploadinfo(){}
 
+
         public uploadinfo(String name,String email ,String  address, String url) {
             this.imageName = name;
             this.imageAddress=address;
@@ -158,5 +155,6 @@ public class Complaint extends AppCompatActivity {
         public String getImageURL() {
             return imageURL;
         }
+
     }
 }
