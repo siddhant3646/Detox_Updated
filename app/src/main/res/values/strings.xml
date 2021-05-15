@@ -4,12 +4,12 @@
     <string name="tfe_ic_gpu_quant_error" translation_description="Error regarding GPU support for Quant models[CHAR_LIMIT=60]">GPU does not yet supported quantized models.</string>
     <string name="tfe_ic_model" translatable="false">Model:</string>
     <string name="detox">DeTox</string>
-    <string name="first_slide_title">first_slide_title</string>
-    <string name="second_slide_title">first_slide_title</string>
-    <string name="third_slide_title">first_slide_title</string>
-    <string name="first_slide_desc">first_slide_title</string>
-    <string name="second_slide_desc">first_slide_title</string>
-    <string name="third_slide_desc">first_slide_title</string>
+    <string name="first_slide_title">Welcome to Detox</string>
+    <string name="second_slide_title">How to use Detox</string>
+    <string name="third_slide_title">How to lodge a Complaint </string>
+    <string name="first_slide_desc">Detox is an application that you can use to help to clean your environment. Detox uses a TfLite Model wrapped inside an android app, by which you can detect garbage.</string>
+    <string name="second_slide_desc">To use the detox app the process quite easy, you need to just point your device to the objects and detox will help you to classify the objects into Garbage and Non-Garbage </string>
+    <string name="third_slide_desc">To lodge a complaint simply click on the complaint button, after that on the new window fill out your details and click on submit button. The report will be verified by the local authority.</string>
     <string name="password">password</string>
     <string-array name="tfe_ic_models" translatable="false">
         <item>Quantized_EfficientNet</item>

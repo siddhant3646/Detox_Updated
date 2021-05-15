@@ -6,16 +6,17 @@
     android:background="@color/white"
     android:layout_height="match_parent"
     tools:context=".OnBoardingScreen">
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/slider"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="400dp"
+        android:layout_height="715dp"
+        app:layout_constraintBottom_toTopOf="@+id/relativelayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/relativelayout"
-        >
-    </androidx.viewpager.widget.ViewPager>
+        app:layout_constraintVertical_bias="0.0"></androidx.viewpager.widget.ViewPager>
 
     <RelativeLayout
         android:id="@+id/relativelayout"
@@ -56,23 +57,24 @@
             android:layout_height="wrap_content"
             android:background="@color/white"
             android:layout_alignParentBottom="true"
+            android:visibility="invisible"
             android:paddingBottom="20dp"
             android:orientation="horizontal">
         </LinearLayout>
 
         <Button
             android:id="@+id/next_btn"
-            android:layout_width="69dp"
-            android:layout_height="74dp"
+            android:layout_width="239dp"
+            android:layout_height="61dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginRight="-2dp"
-            android:layout_marginBottom="-4dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="8dp"
             android:background="@android:color/transparent"
             android:drawableEnd="@drawable/d4"
+            android:drawableRight="@drawable/d4"
             android:gravity="center"
-            android:textSize="25sp"
-            android:drawableRight="@drawable/d4" />
+            android:textSize="25sp" />
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

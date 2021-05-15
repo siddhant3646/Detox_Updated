@@ -1,4 +1,4 @@
-package org.tensorflow.lite.examples.classification;
+ package org.tensorflow.lite.examples.classification;
 
 /*
  * Copyright 2019 The TensorFlow Authors. All Rights Reserved.
