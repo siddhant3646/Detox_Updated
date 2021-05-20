@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".before_regis">
 
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="187dp"
+        android:layout_height="57dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.565" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="411dp"
@@ -32,13 +44,25 @@
 
     <Button
         android:id="@+id/button_otp"
-        android:layout_width="320dp"
-        android:layout_height="46dp"
+        android:layout_width="172dp"
+        android:layout_height="59dp"
         android:text="Phone Verification"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.694" />
+        app:layout_constraintVertical_bias="0.68" />
+
+    <Button
+        android:id="@+id/button_otp2"
+        android:layout_width="170dp"
+        android:layout_height="56dp"
+        android:text="Email Registration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.801" />
 </androidx.constraintlayout.widget.ConstraintLayout>

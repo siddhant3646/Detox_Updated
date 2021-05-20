@@ -24,3 +24,8 @@ public class MainActivity extends AppCompatActivity {
         }, SPLASH_SCREEN_TIME_OUT);
     }
 }
+/*
+        if (mAuth.getCurrentUser() != null) {
+                finish();
+                startActivity(new Intent(this, MainActivity4.class));
+        }*/
