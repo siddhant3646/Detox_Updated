@@ -124,7 +124,7 @@
         android:textColor="#373333"
         android:textSize="18dp"
         android:textStyle="normal"
-        app:backgroundTint="#00cccc"
+        android:background="@drawable/rounded123"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.468"

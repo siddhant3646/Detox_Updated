@@ -7,9 +7,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class MainActivity extends AppCompatActivity {
     private static int SPLASH_SCREEN_TIME_OUT=1500;
-
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,8 +26,3 @@ public class MainActivity extends AppCompatActivity {
         }, SPLASH_SCREEN_TIME_OUT);
     }
 }
-/*
-        if (mAuth.getCurrentUser() != null) {
-                finish();
-                startActivity(new Intent(this, MainActivity4.class));
-        }*/

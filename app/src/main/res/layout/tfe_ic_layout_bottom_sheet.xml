@@ -321,11 +321,12 @@
             android:visibility="invisible" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:text="You can lodge a compalint using this button " />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="359dp"
+        android:layout_height="79dp"
+        android:background="@drawable/rounded123"
+        android:text="Lodge a Complaint" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -350,11 +351,5 @@
             android:prompt="@string/tfe_ic_device"
             android:visibility="invisible" />
     </RelativeLayout>
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="397dp"
-        android:layout_height="79dp"
-        android:text="Lodge a Complaint" />
 
 </LinearLayout>

@@ -35,12 +35,21 @@ public class before_regis extends AppCompatActivity {
     GoogleSignInClient mGoogleSignInClient;
     FirebaseAuth mAuth;
     Button b1, b2;
+    TextView t1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_before_regis);
         b1 = findViewById(R.id.button_otp);
+        t1=findViewById(R.id.textView8789);
         b2 = findViewById(R.id.button_otp2);
+        t1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i1 = new Intent(before_regis.this,Login.class);
+                startActivity(i1);
+            }
+        });
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

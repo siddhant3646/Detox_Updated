@@ -1,8 +1,6 @@
 package org.tensorflow.lite.examples.classification;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
@@ -12,7 +10,8 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 public class OnBoardingScreen extends AppCompatActivity {
     ViewPager viewPager;
     LinearLayout dotsLayout;
@@ -21,11 +20,17 @@ public class OnBoardingScreen extends AppCompatActivity {
     Button letsgetstarted,next;
     Animation animation;
     int currentpos;
-
+    FirebaseAuth firebaseAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding_screen);
+        firebaseAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        if (user != null) {
+            finish();
+            startActivity(new Intent(OnBoardingScreen.this, home.class));
+        }
         viewPager = findViewById(R.id.slider);
         dotsLayout = findViewById(R.id.dots);
         letsgetstarted = findViewById(R.id.get_started_btn);
@@ -78,7 +83,6 @@ public class OnBoardingScreen extends AppCompatActivity {
             {
                 letsgetstarted.setVisibility(View.INVISIBLE);
                 next.setVisibility(View.VISIBLE);
-
             }
             if(position == 1)
             {

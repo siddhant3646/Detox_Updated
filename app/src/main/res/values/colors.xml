@@ -14,6 +14,7 @@
     <color name="colorred">#FDFDFC</color>
     <color name="back">#A2D567</color>
     <color name="ripple">#4CAF50</color>
+    <color name="ripple1">#90DFE6</color>
 
     <color name="tfe_semi_transparent">#66000000</color>
 </resources>
