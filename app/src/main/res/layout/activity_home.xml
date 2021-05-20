@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".home">
 
     <TextView
@@ -13,7 +14,9 @@
         android:fontFamily="@font/poppins_bold"
         android:text="Welcome To DeTox"
         android:textSize="35dp"
-        android:gravity="center"
+        android:gravity="left"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="15dp"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,18 +27,18 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="421dp"
-        android:layout_height="347dp"
+        android:layout_width="411dp"
+        android:layout_height="355dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.198"
-        app:srcCompat="@drawable/CLS" />
+        app:layout_constraintVertical_bias="0.192"
+        app:srcCompat="@drawable/cls" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/scan"
         android:layout_width="355dp"
         android:layout_height="56dp"
         android:text="Start Scanning"
@@ -46,7 +49,7 @@
         app:layout_constraintVertical_bias="0.648" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/medium"
         android:layout_width="355dp"
         android:layout_height="56dp"
         android:text="Why cleaning is important"
@@ -58,7 +61,7 @@
         app:layout_constraintVertical_bias="0.76" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/contact_cc"
         android:layout_width="355dp"
         android:layout_height="56dp"
         android:text="Contact Cleaning Authority"
@@ -69,7 +72,7 @@
         app:layout_constraintVertical_bias="0.872" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/devcon"
         android:layout_width="355dp"
         android:layout_height="56dp"
         android:text="Contact Developers"
