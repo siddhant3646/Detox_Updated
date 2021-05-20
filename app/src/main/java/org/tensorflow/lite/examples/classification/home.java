@@ -24,9 +24,9 @@ public class home extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:7905828880"));
-                startActivity(intent);
+                Intent i=new Intent(home.this, ClassifierActivity.class);
+                startActivity(i);
+                finish();
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {

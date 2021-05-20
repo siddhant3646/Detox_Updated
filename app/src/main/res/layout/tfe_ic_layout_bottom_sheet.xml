@@ -43,10 +43,10 @@
             <TextView
                 android:id="@+id/detected_item_value"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="right"
+                android:layout_height="58dp"
+                android:gravity="center"
                 android:textColor="@android:color/black"
-                android:textSize="16sp" />
+                android:textSize="20dp" />
 
         </LinearLayout>
 
@@ -66,10 +66,11 @@
             <TextView
                 android:id="@+id/detected_item1_value"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="right"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:visibility="invisible" />
 
         </LinearLayout>
 
@@ -92,7 +93,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="right"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:visibility="invisible" />
 
         </LinearLayout>
 
@@ -319,6 +321,12 @@
             android:visibility="invisible" />
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="You can lodge a compalint using this button " />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -348,4 +356,5 @@
         android:layout_width="397dp"
         android:layout_height="79dp"
         android:text="Lodge a Complaint" />
+
 </LinearLayout>
