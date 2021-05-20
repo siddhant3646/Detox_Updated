@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,14 +19,19 @@ import com.google.android.gms.common.api.GoogleApiClient;
 import org.checkerframework.checker.nullness.qual.NonNull;
 
 public class before_regis extends AppCompatActivity {
-    SignInButton signInButton;
-    private GoogleApiClient googleApiClient;
-    TextView textView;
-    private static final int RC_SIGN_IN = 1;
-
+    Button b1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_before_regis);
+        b1=findViewById(R.id.button_otp);
+        b1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(before_regis.this, phone_otp.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 }

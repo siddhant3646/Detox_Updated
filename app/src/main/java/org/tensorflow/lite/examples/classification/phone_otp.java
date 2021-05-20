@@ -1,6 +1,5 @@
 package org.tensorflow.lite.examples.classification;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -15,8 +14,6 @@ public class phone_otp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phone_otp);
-        ActionBar actionBar=getSupportActionBar();
-        actionBar.hide();
         editTextMobile = findViewById(R.id.mobilemum);
 
         findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
@@ -30,7 +27,7 @@ public class phone_otp extends AppCompatActivity {
                     return;
                 }
 
-                Intent intent = new Intent(phone_otp.this,otp_verify.class);
+                Intent intent = new Intent(phone_otp.this,phone_otp2.class);
                 intent.putExtra("mobile", mobile);
                 startActivity(intent);
             }

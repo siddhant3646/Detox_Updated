@@ -1,10 +1,8 @@
 package org.tensorflow.lite.examples.classification;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -25,7 +23,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 
 import java.util.concurrent.TimeUnit;
 
-public class otp_verify extends AppCompatActivity {
+public class phone_otp2 extends AppCompatActivity {
     //These are the objects needed
     //It is the verification id that will be sent to the user
     private String mVerificationId;
@@ -37,9 +35,7 @@ public class otp_verify extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_otp_verify);
-        ActionBar actionBar=getSupportActionBar();
-        actionBar.hide();
+        setContentView(R.layout.activity_phone_otp2);
         mAuth = FirebaseAuth.getInstance();
         editTextCode = findViewById(R.id.inputcode1);
         tv3=findViewById(R.id.textView3);
@@ -68,7 +64,7 @@ public class otp_verify extends AppCompatActivity {
                 "+91" + mobile,
                 60,
                 TimeUnit.SECONDS,
-                (Activity) TaskExecutors.MAIN_THREAD,
+                phone_otp2.this,
                 mCallbacks);
     }
     //the callback to detect the verification status
@@ -88,7 +84,7 @@ public class otp_verify extends AppCompatActivity {
         }
         @Override
         public void onVerificationFailed(FirebaseException e) {
-            Toast.makeText(otp_verify.this, e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(phone_otp2.this, e.getMessage(), Toast.LENGTH_LONG).show();
         }
         @Override
         public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
@@ -106,12 +102,12 @@ public class otp_verify extends AppCompatActivity {
     }
     private void signInWithPhoneAuthCredential(PhoneAuthCredential credential) {
         mAuth.signInWithCredential(credential)
-                .addOnCompleteListener(otp_verify.this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener(phone_otp2.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             //verification successful we will start the profile activity
-                            Intent intent = new Intent(otp_verify.this, home.class);
+                            Intent intent = new Intent(phone_otp2.this, home.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                         } else {

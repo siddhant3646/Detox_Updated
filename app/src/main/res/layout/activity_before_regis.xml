@@ -31,7 +31,7 @@
         app:srcCompat="@drawable/register" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_otp"
         android:layout_width="320dp"
         android:layout_height="46dp"
         android:text="Phone Verification"
