@@ -31,12 +31,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import org.tensorflow.lite.examples.classification.tflite.Classifier;
+
 public class Complaint extends AppCompatActivity {
     Button btnbrowse, btnupload;
+    TextView BTH;
     EditText txtdata ;
     EditText txtdata2 ;
     EditText txtdata3 ;
-    TextView t1;
     ImageView imgview;
     Uri FilePathUri;
     StorageReference storageReference;
@@ -51,16 +53,16 @@ public class Complaint extends AppCompatActivity {
         storageReference = FirebaseStorage.getInstance().getReference("Images");
         databaseReference = FirebaseDatabase.getInstance().getReference("Images");
         btnbrowse = (Button)findViewById(R.id.btnbrowse);
+        BTH=findViewById(R.id.backtohome);
         btnupload= (Button)findViewById(R.id.btnupload);
         txtdata = (EditText)findViewById(R.id.txtdata);
         txtdata2 = (EditText)findViewById(R.id.txtdata2);
         txtdata3 = (EditText)findViewById(R.id.txtdata3);
         imgview = (ImageView)findViewById(R.id.image_view);
-        t1=findViewById(R.id.backtohome);
-        t1.setOnClickListener(new View.OnClickListener() {
+        BTH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i1 = new Intent(Complaint.this,CameraActivity.class);
+                Intent i1 = new Intent(Complaint.this, home.class);
                 startActivity(i1);
             }
         });
