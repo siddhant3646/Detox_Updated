@@ -32,7 +32,7 @@ public class OnBoardingScreen extends AppCompatActivity {
         letsgetstarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(OnBoardingScreen.this, MainActivity3.class);
+                Intent i=new Intent(OnBoardingScreen.this, before_regis.class);
                 startActivity(i);
                 finish();
             }

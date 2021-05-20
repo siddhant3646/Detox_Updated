@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.ImageClassification">
-        <activity android:name=".before_regis"></activity>
+        <activity android:name=".otp_verify"></activity>
+        <activity android:name=".phone_otp" />
+        <activity android:name=".before_regis" />
         <activity android:name=".home" />
         <activity android:name=".Complaint" />
         <activity android:name=".forget_password" />
