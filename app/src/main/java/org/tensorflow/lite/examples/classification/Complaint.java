@@ -11,6 +11,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -39,6 +40,7 @@ public class Complaint extends AppCompatActivity {
     EditText txtdata ;
     EditText txtdata2 ;
     EditText txtdata3 ;
+    EditText txtdata4;
     ImageView imgview;
     Uri FilePathUri;
     StorageReference storageReference;
@@ -58,6 +60,7 @@ public class Complaint extends AppCompatActivity {
         txtdata = (EditText)findViewById(R.id.txtdata);
         txtdata2 = (EditText)findViewById(R.id.txtdata2);
         txtdata3 = (EditText)findViewById(R.id.txtdata3);
+        txtdata4 = (EditText)findViewById(R.id.txtdata4);
         imgview = (ImageView)findViewById(R.id.image_view);
         BTH.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,8 +85,30 @@ public class Complaint extends AppCompatActivity {
         btnupload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                UploadImage();
+                String TempImageName11 = txtdata.getText().toString().trim();
+                String TempImageName21 = txtdata2.getText().toString().trim();
+                String TempImageName31 = txtdata3.getText().toString().trim();
+                String TempImageName41 = txtdata4.getText().toString().trim();
 
+                if (TextUtils.isEmpty(TempImageName11)) {
+                    txtdata.setError("Please enter name");
+                    return;
+                }
+                if (TextUtils.isEmpty(TempImageName21)) {
+                    txtdata2.setError("Please enter name");
+                    return;
+                }
+                if (TextUtils.isEmpty(TempImageName31)) {
+                    txtdata3.setError("Please enter name");
+                    return;
+                }
+                if (TextUtils.isEmpty(TempImageName41)) {
+                    txtdata4.setError("Please enter name");
+                    return;
+                }
+                else {
+                    UploadImage();
+                }
             }
         });
         }
@@ -131,12 +156,14 @@ public class Complaint extends AppCompatActivity {
                             String TempImageName = txtdata.getText().toString().trim();
                             String TempImageName2 = txtdata2.getText().toString().trim();
                             String TempImageName3 = txtdata3.getText().toString().trim();
-                            progressDialog.dismiss();
-                            Toast.makeText(Complaint.this, "Complaint Registered Succesfully", Toast.LENGTH_LONG).show();
-                            @SuppressWarnings("VisibleForTests")
-                            uploadinfo imageUploadInfo = new uploadinfo(TempImageName,TempImageName2,TempImageName3, taskSnapshot.getUploadSessionUri().toString());
-                            String ImageUploadId = databaseReference.push().getKey();
-                            databaseReference.child(ImageUploadId).setValue(imageUploadInfo);
+                            String TempImageName4 = txtdata4.getText().toString().trim();
+                                progressDialog.dismiss();
+                                Toast.makeText(Complaint.this, "Complaint Registered Succesfully", Toast.LENGTH_LONG).show();
+                                @SuppressWarnings("VisibleForTests")
+                                uploadinfo imageUploadInfo = new uploadinfo(TempImageName, TempImageName2, TempImageName3, TempImageName4, taskSnapshot.getUploadSessionUri().toString());
+                                String ImageUploadId = databaseReference.push().getKey();
+                                databaseReference.child(ImageUploadId).setValue(imageUploadInfo);
+
                         }
                     });
         }
@@ -151,14 +178,16 @@ public class Complaint extends AppCompatActivity {
         public String imageName;
         public String imageEmail;
         public String imageAddress;
+        public String ImageDetails;
         public String imageURL;
         public uploadinfo(){}
 
 
-        public uploadinfo(String name,String email ,String  address, String url) {
+        public uploadinfo(String name,String email ,String  address,String details, String url) {
             this.imageName = name;
             this.imageAddress=address;
             this.imageEmail=email;
+            this.ImageDetails=details;
             this.imageURL = url;
         }
 
