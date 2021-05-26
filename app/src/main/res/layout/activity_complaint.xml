@@ -54,7 +54,7 @@
         android:layout_height="108dp"
         android:background="@drawable/roundview"
         android:gravity="left"
-        android:hint="Details"
+        android:hint="Details of the Area"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
