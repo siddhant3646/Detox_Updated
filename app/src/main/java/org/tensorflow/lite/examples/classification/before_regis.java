@@ -29,6 +29,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import missing.namespace.R;
+
 public class before_regis extends AppCompatActivity {
     private static final int RC_SIGN_IN = 234;
     private static final String TAG = "simplifiedcoding";
